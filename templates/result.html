@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Prediction Results</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>KMeans Prediction Results</h1>
+    <h2>Clustering Metrics</h2>
+    <p>Silhouette Score: {{ silhouette_avg }}</p>
+    <h2>Best Cluster Data</h2>
+    <div>{{ result_html|safe }}</div>  <!-- This line displays the best cluster DataFrame HTML -->
+
+    <a href="/upload">Upload another file</a>
+</body>
+</html>

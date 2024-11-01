@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation Login</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="heading">
+            <h1>Customer Segmentation Using Machine Learning</h1>  
+        </header>
+        <br>
+        <main class="dialog-box">
+            <div class="middle">
+                <div class="content-log">
+                    <div class="content-left-log">
+                    </div>
+                    <form action="{{ url_for('login') }}" method="POST" class="content-right">
+                        <ul class="ul">
+                            <h2 class="title-h2">Login or Sign in</h2>
+                            <br>
+                            <div class="login-cont">
+                                <div class="input-left">
+                                    <p class="par-input">Enter Email :   </p>
+                                    <p class="par-input">Enter Password : </p>
+                                </div>
+                                <div class="input-right">
+                                    <input class="input-box" type="email" name="email" placeholder="Enter Email"> 
+                                    <input class="input-box" type="password" name="password" placeholder="Enter Password">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <p class="text">Click Here if you haven't  <a href="{{url_for('register')}}">Register</a> </p>
+                            <button class="input-button" type="submit" onclick="URL(Dashboard.html)">Login</button>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

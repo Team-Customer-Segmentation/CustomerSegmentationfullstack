@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation - DashBoard</title>
+    <link rel="stylesheet" href="..\static\css\Dashboard.css">
+
+</head>
+<body>
+    <div class="container">
+        <sidepanel class="sidepanel">
+            <div class="">
+                <heading class="heading">
+                <a href="Dashboard.html"><h1>Dashboard</h1></a>
+                </heading>
+                <nav class="elements">
+                    <ul>
+                        <a href="#Data Collection" class="input-button">Data Collection</a>
+                        <a href="#Data Preprocessing" class="input-button">Data Preprocessing</a>
+                        <a href="#Exploratory Data Analysis" class="input-button">Exploratory Data Analysis</a>
+                        <a href="#Outliers Detection" class="input-button">Outliers Detection</a>
+                        <a href="#Algorithms Selection" class="input-button">Algorithms Selection</a>
+                        <a href="#Various Algorithm" class="input-button">Various Algorithm</a>
+                        <a href="#K-Means Algorithm" class="input-button">K-Means Algorithm</a>
+                        <a href="#Finalizing Algorithm" class="input-button">Finalizing Algorithm</a>
+                        <a href="#Overall Result" class="input-button">Overall Result</a>
+                    </ul>
+                </nav>
+            </div>
+        </sidepanel> 
+        <right class="right-container">
+            <div class="right-top">
+                <div class="elements-nav">
+                    <input class="Search-bar" type="search" placeholder="Search">
+                    <nav class="drop-down">
+                        <div class="profile">
+                            <a href="#Account"><img src="{{ url_for('static', filename='images/Group 1.png') }}" alt="Account" width="50px" height="50px"></a>
+                            <a href="#Account" class="text-font">My Account</a>
+                        </div>
+                        <a href="{{url_for('login')}}" class="init">LogOut</a>
+                    </nav>
+                </div>
+                
+            </div>
+            <div class="right-down text-font">
+                <div class="customer-seg-bre text-font" id="Data Collection">
+                    
+                        <h2>Data Collection</h2>
+                        <p>Data collection for customer segmentation has been conducted using datasets sourced from Kaggle, a popular platform for data science and machine learning resources. Kaggle hosts a wide variety of publicly available datasets that cover diverse topics, including customer behavior, purchasing patterns, and demographic information. 
+
+                            By leveraging these datasets, businesses can gain valuable insights into customer characteristics and preferences. The rich data provided on Kaggle enables detailed analysis and segmentation, allowing for the identification of distinct customer groups based on factors such as demographics, behavior, and spending habits. Utilizing Kaggle as a data source facilitates efficient data collection and enhances the overall effectiveness of customer segmentation efforts.</p>
+                            <div class="img img-title"><h3>Uploading Dataset</h3><img src="{{url_for('static',filename='images/uploading_dataset.png')}}" alt="Uploading Dataset" width="600px" height="500px"></div>
+                </div>
+                <div class="data-preprocessing text-font" id="Data Preprocessing">
+                    <h2>Data Preprocessing</h2>
+                    <p>Data preprocessing is the critical step of cleaning, transforming, and preparing raw data for analysis. It includes tasks such as handling missing values, scaling features, and encoding categorical data, ensuring that the dataset is in a suitable format for machine learning algorithms. Effective preprocessing improves model accuracy and performance by ensuring the data is structured and consistent.</p>
+                    <div class="img">
+                        <div class="img-inline"><h3>Removing Null and Duplicates</h3><img src="{{url_for('static',filename='images/removing_null_values.png')}}" alt="Removing Null Values" width="300px" height="250px"></div>
+                        <div class="img-inline"><img src="{{url_for('static',filename='images/removing_duplicates.png')}}" alt="Removing Duplicates" width="450px" height="350px"></div>
+                    </div>
+                </div>
+                <div class="eda-div text-font" id="Exploratory Data Analysis">
+                    <h2>Exploratory Data Analysis</h2>
+                    <p>Exploratory Data Analysis (EDA) involves several techniques to gain insights from the data. A scatter plot between 'Total_No_of_Items' and 'Total_Spend' helps identify the relationship between how much customers spend based on the number of items purchased. Pair plots between features like 'Total_Spend', 'Items_Purchased', 'Types_of_Items_Purchased', and 'CustomerID' reveal correlations and trends among these variables. A bar plot showcasing the 'Top 10 Customers by Total Spend' highlights key spenders. Additionally, histograms, box plots, and heatmaps can be used to further explore data distributions, outliers, and feature correlations, offering a comprehensive understanding of customer behavior.</p>
+                    <div class="img">
+                        <div class="img-inline"><h3>Top 5 Countries by Customer Count</h3><img src="{{url_for('static',filename='images/country_pie-chart.png')}}" alt="Geographical Analysis" width="400px" height="400px"></div>
+                        <div class="img-inline"><h3>Correlation Heatmap</h3><img src="{{url_for('static',filename='images/correlation_heatmap.png')}}" alt="Correlation Heatmap" width="400px" height="400px"></div>
+                    </div>
+                </div>
+                <div class="outlier-detection text-font" id="Outliers Detection">
+                    <h2>Outliers Detection</h2>
+                    <p>Outlier detection identifies data points that deviate significantly from the rest of the dataset, which can distort analysis results. Techniques like Z-score, IQR, and DBSCAN clustering are commonly used to detect and manage outliers, ensuring more accurate and reliable insights.</p>
+                    <div class="img img-title"><h3>Outliers Detection</h3><img src="{{url_for('static',filename='images/outlier_detection.png')}}" alt="Outlier Detection" width="500px" height="400px"></div>
+                </div>
+                <div class="algo-selection" id="Algorithms Selection">
+                    <h2>Algorithms Selection</h2>
+                    <p>Algorithm selection involves choosing the most suitable machine learning algorithm based on the dataset’s characteristics, the problem type, and performance requirements. Methods like K-Means, DBSCAN, and Hierarchical Clustering are evaluated for tasks like customer segmentation to ensure optimal results.</p>
+                    <ol>
+                        <li><p><b>Hierarchical Clustering</b>For creating nested clusters in a tree-like structure.</p></li>
+                        <li><p><b>K-Means Clustering</b>For partitioning data into distinct groups.</p></li>
+                        <li><p><b>DBSCAN (Density-Based Spatial Clustering of Applications with Noise) </b>For identifying clusters of varying shapes and handling noise.</p></li>
+                        <li><p><b>Gaussian Mixture Models (GMM)</b>A probabilistic model that assumes data is generated from a mixture of Gaussian distributions, allowing for complex, overlapping clusters.</p></li>
+                    </ol>
+                </div>
+                <div class="vari-algo" id="Various Algorithm">
+                    <h2>Applying Various Algorithms</h2>
+                    <p>Applying K-Means, GMM, DBSCAN, and Hierarchical Clustering allows for diverse approaches to customer segmentation, each handling clusters differently. K-Means and GMM form spherical and probabilistic clusters, respectively, DBSCAN excels at identifying clusters with noise, while HC builds nested clusters based on distances.</p>
+                    <div class="img"><div class="img-inline"><h3>K-Means Clustering</h3><img src="{{url_for('static',filename='images/kmeans.png')}}" alt="K-Means Clustering" width="400px" height="300px"></div>
+                    <div class="img-inline"><h3>Hierarchical Clustering</h3><img src="{{url_for('static',filename='images/hc_algo.png')}}" alt="Hierarchical Clustering" width="400px" height="300px"></div>
+                    </div>
+                    <div class="img"><div class="img-inline"><h3>DBSCAN Clustering</h3><img src="{{url_for('static',filename='images/dbscan_algo.png')}}" alt="Hierarchical Clustering" width="400px" height="300px"></div>
+                    <div class="img-inline"><h3>Gaussian Mixture Models (GMM)</h3><img src="{{url_for('static',filename='images/gmm_algo.png')}}" alt="Hierarchical Clustering" width="400px" height="300px"></div>
+                    </div>
+                </div>
+                <div class="kmeans-algo" id="K-Means Algorithm">
+                    <h2>K-Means Algorithm</h2>
+                    <p>Applying K-Means involves using the Elbow Method and Silhouette Score to determine the optimal number of clusters (K) based on features such as 'Total_Spend' and 'Total_No_of_Items'. The Elbow Method identifies the K value where the within-cluster variance significantly decreases, while the Silhouette Score evaluates the quality of clustering by measuring how similar points are within the same cluster compared to others.</p>
+                    <div class="img">
+                        <div class="img-inline"><h3>Elbow Method</h3><img src="{{url_for('static',filename='images/elbow.png')}}" alt="Elbow Method" width="400px" height="300px"></div>
+                        <div class="img-inline"><h3>Silhouette Score</h3><img src="{{url_for('static',filename='images/silhouette.png')}}" alt="Silhouette" width="400px" height="300px"></div>
+                    </div>
+                    <div class="img">
+                        <div class="img-inline"><h3>PCA Analysis 2D plot</h3><img src="{{url_for('static',filename='images/pca-2d-plot.png')}}" alt="2D Plot" width="400px" height="300px"></div>
+                        <div class="img-inline"><h3>PCA Analysis 3D plot</h3><img src="{{url_for('static',filename='images/pca-3d plot.png')}}" alt="3D Plot" width="400px" height="400px"></div>
+                    </div>
+                    <div class="img img-title"><h3>K-Means Scatter plot</h3><img src="{{url_for('static',filename='images/kmeans_3_feature.png')}}" alt="K-Means Customer Segments" width="550px" height="400px"></div>
+                </div>
+                <div class="final-algo" id="Finalizing Algorithm">
+                    <h2>Finalizing Algorithm - Comparing the above mentioned Algorithms</h2>
+                    <p>In this analysis, we apply a comparison between K-Means and Hierarchical Clustering (HC) to evaluate their performance in customer segmentation. The results of this comparison, outlined below, highlight the strengths and weaknesses of each algorithm, helping us determine the most suitable approach for our dataset and objectives.</p>
+                    <div class="img-title"><h3>Applying Comparision between the applied Algorithms</h3><img src="{{url_for('static',filename='images/comparision.png')}}" alt="Applying Comparision between the applied Algorithms" width="1000px" height="900px"></div>
+                    <p>The results of the silhouette score comparison indicate that K-Means outperforms the other algorithms, achieving a silhouette score of '0.3980'. This suggests that K-Means provides better-defined clusters compared to Hierarchical Clustering, which has a score of '0.3622', indicating moderate clustering quality. In contrast, Gaussian Mixture Models yield a lower silhouette score of '0.1681', signifying less effective clustering. Overall, these results suggest that K-Means is the most suitable algorithm for customer segmentation in this analysis.</p>
+                </div>
+                <div class="Overall-Result" id="Overall Result">
+                    <div class="content-box ">
+                        <div class="box">
+                            <h4>4,00,671</h4>
+                            <h6 class="cont-par">Total Number of Invoice Generated</h6>
+                        </div>
+                        <div class="box">
+                            <h4>3,95,439</h4>
+                            <h6 class="cont-par">Remaining Invoices post Data Preprocessing</h6>
+                        </div>
+                        <div class="box">
+                            <h4>4,899</h4>
+                            <h6 class="cont-par">Total Number of Customers</h6>
+                        </div>
+                        <div class="box">
+                            <h4>4,641</h4>
+                            <h6 class="cont-par">Customers after cleaning</h6>
+                        </div>
+                    </div>
+                    <div class="space-img">
+                        <div class="img space-img">
+                            <div class="img-inline"><h3>Count of Purchases</h3><img src="{{url_for('static',filename='images/purchase_overtime.png')}}" alt="Count of Purchases" width="500px" height="320px"></div>
+                            <div class="img-inline"><h3>Top 10 Spend Customers</h3><img src="{{url_for('static',filename='images/top-10-spend -cust.png')}}" alt="Top 10 spend customers" width="500px" height="400px"></div>
+                        </div>
+                        <div class="text-title">
+                            <h3>Cluster Distribution</h3></div>
+                        <div class="img space-img">
+                            <div class="img-inline "><img src="{{url_for('static',filename='images/distribution-of cust-over-clusters.png')}}" alt="Cluster Distribution" width="500px" height="500px"></div>
+                            <div class="img-inline "><img src="{{url_for('static',filename='images/distribution-of cust-seg.png')}}" alt="Distribution Customer Segment" width="500px" height="500px"></div>
+                        </div>
+                        <h3 class="text-title">Cluster Analysis on each Feature</h3>
+                        <div class="img space-img">
+                            <div class="img-inline"><img src="{{url_for('static',filename='images/average-total-spend-cluster.png')}}" alt="Total Spend Cluster Analysis" width="300px" height="300px"></div>
+                            <div class="img-inline"><img src="{{url_for('static',filename='images/average-recency-cluster.png')}}" alt="Recency Cluster Analysis" width="300px" height="300px"></div>
+                            <div class="img-inline"><img src="{{url_for('static',filename='images/average-no-invoice-cluster.png')}}" alt="Number of Invoice Cluster Analysis" width="300px" height="300px"></div>
+                        </div>
+                        <p>Based on the analysis of the customer segmentation, we have identified four distinct clusters representing different groups of customers. Here is a breakdown of the key statistics for each cluster:</p>
+                        <ol>
+                            <li><h3>Cluster 0:</h3></li>
+                            <ul>
+                                <li><b>Total Spend:</b> 996.15</li>
+                                <li><b>Recency:</b> 63.27 days (meaning customers in this cluster last made a purchase approximately 63 days ago)</li>
+                                <li><b>Frequency (Total No. of Invoices):</b> 3.29</li>
+                            </ul>
+                            <li><h3>Cluster 1:</h3></li>
+                            <ul>
+                                <li><b>Total Spend:</b> 366.89</li>
+                                <li><b>Recency:</b> 64.04 days </li>
+                                <li><b>Frequency:</b>1.57</li>
+                            </ul>
+                            <li><h3>Cluster 2:</h3></li>
+                            <ul>
+                                <li><b>Total Spend:</b> 245.49</li>
+                                <li><b>Recency:</b> 291.16 days </li>
+                                <li><b>Frequency :</b> 1.18</li>
+                            </ul>
+                            <li><h3>Cluster 3:</h3></li>
+                            <ul>
+                                <li><b>Total Spend:</b> 2113.58</li>
+                                <li><b>Recency:</b> 40.79 days </li>
+                                <li><b>Frequency:</b> 5.23</li>
+                            </ul>
+                        </ol>
+                        <h3>Interpretation :</h3>
+                        <p>Cluster 3 emerges as the best group of customers. These customers have the highest total spend of 2113.58, the lowest recency of 40.79 days (indicating recent activity), and the highest frequency of purchases at 5.23 invoices generated. This suggests that customers in Cluster 3 are the most engaged and valuable, making them ideal for targeted marketing or loyalty programs.</p>
+                        <div class="table-container">
+                            <h3>Best Customers Cluster</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        {% for col in column_names%}
+                                        <th>{{ col }}</th>
+                                        {%endfor%}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in data%}
+                                        <tr>
+                                            {% for col in column_names%}
+                                            <th>{{ row[col]}}</th>
+                                            {%endfor%}
+                                        </tr>
+                                    {%endfor%}
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="{{url_for('upload_file')}}" class="input-button-upl">Upload File</a>
+                    </div>
+                </div>
+            </div>
+        </right>
+    </div>
+</body>
+</html>

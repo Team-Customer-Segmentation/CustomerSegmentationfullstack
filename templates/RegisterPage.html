@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation - Register</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="heading">
+            <h1>Customer Segmentation Using Machine Learning</h1>
+        </header>
+        <br>
+        <main>
+            <div class="middle">
+                <div class="content-reg">
+                    <div class="content-left-reg">
+                        
+                    </div>
+                    <form class="content-right" method="POST" action="{{ url_for('register') }}">
+                        <ul class="ul">
+                            <h2 class="title-h2">Register</h2>
+                            <div class="login-cont">
+                                <div class="input-left">
+                                    <label class="par-input">Enter Name :</label>
+                                    <label class="par-input">Enter Email :</label>
+                                    <label class="par-input">Enter Password :</label>
+                                    <label class="par-input">Re-enter Password :</label>
+                                </div>
+                                <div class="input-right">
+                                    <input class="input-box" type="text" name="name" placeholder="Enter Name" required>
+                                    <input class="input-box" type="email" name="email" placeholder="Enter Email" required>
+                                    <input class="input-box" type="password" name="password" placeholder="Enter Password" required>
+                                    <input class="input-box" type="password" name="re_password" placeholder="Re-enter Password" required>
+                                </div>
+                            </div>
+                            <p class="par-input"><input type="checkbox" value="Remember me">  Remember me</p>
+
+                            <input class="input-button" type="submit" value="Register">
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

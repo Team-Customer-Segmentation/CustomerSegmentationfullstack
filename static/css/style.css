@@ -1,0 +1,200 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    background-size: 100%;
+}
+
+.container{
+    width: 100vw;
+    height: 100%;
+    background-image: url('/static/images/vector_bg.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 700px 700px;
+}
+
+.heading{
+    width: 100vw;
+    height: 10vh;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 900;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height: 90vh;
+}
+
+.content-log{
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    width: 40%;
+    margin: 10px;
+    border: thin solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+}
+.content-reg{
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    width: 50%;
+    margin: 10px;
+    border: thin solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: center;
+}
+
+.title-h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: 300;
+    color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+}
+.par-input{
+    align-self: flex-start;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+.login-cont{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.input-left{
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.input-right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    row-gap: 10px;
+}
+
+.input-box{
+    position: relative;
+    align-self: self-end;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    border-radius: 8px;
+    border-color: rgb(101 97 122);
+    border: 0.7px solid;
+}
+
+.input-button{
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.outer-container::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Slightly outside the container */
+    left: -20px;
+    width: calc(100% + 40px); /* Make pseudo-element larger than container */
+    height: calc(100% + 40px);
+    z-index: -1; /* Place behind the content */
+    border-radius: inherit; /* Matches the border-radius of the container */
+    background: radial-gradient(circle, rgba(237, 237, 237, 0.4) 60%, transparent 0%);
+}
+
+.content-left-log{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/static/images/Group_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.content-right{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.elements-left{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-items: center;
+}
+.dialog-box{
+    width: 100%;
+    height: 90vh;
+}
+.content-left-reg{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/static/images/registerbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    height: 100%;
+    width: 100%;
+}
+.ul{
+    padding-inline-start: 0px;
+}
